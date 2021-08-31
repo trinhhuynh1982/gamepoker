@@ -1,0 +1,41 @@
+@import "../../assets/styles/mixins.scss";
+
+.hand {
+    @include border-radius(30px);
+    background-color: #fff;
+    padding: 15px;
+    width: 50%;
+    margin: 0 auto;
+    .bestHand {
+        font-size: 30px;
+        display: block;
+        text-align: center;
+        color: red;
+        text-transform: uppercase;
+        animation: heartBeat 1.5s infinite;
+    }
+    .hand-inner {
+        @include flexbox;
+        @include align-items(center);
+    }
+    .playerInfo {
+        width: 100px;
+        img {
+            width: 100px;
+            @include border-radius(30px);
+        }
+        .name {
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 5px 0 0;
+        }
+    }
+    .cards {
+        @include flexbox;
+        @include align-items(center);
+        padding: 2px;
+        margin: 0 auto;
+    }
+}

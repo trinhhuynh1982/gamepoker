@@ -1,0 +1,17 @@
+@import "./assets/styles/mixins.scss";
+
+.deck {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(center);  
+}
+.btn-wrap {
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 15px 0;
+}

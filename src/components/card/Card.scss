@@ -1,0 +1,16 @@
+@import "../../assets/styles/mixins.scss";
+
+
+.card-container {
+  height: 141px;
+  width: 100px;
+  background-color: white;
+  background-size: cover;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px;
+  @include transition (all, 0.25s, ease);
+}

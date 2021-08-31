@@ -3,7 +3,7 @@ function getRanksOnly(hand) {
 }
 
 function tallyRanks(hand) {
-    var ranks = getRanksOnly(hand);
+    let ranks = getRanksOnly(hand);
 
     return ranks.reduce((acc, val) => {
         if (!acc.hasOwnProperty(val)) acc[val] = 0;
@@ -13,7 +13,7 @@ function tallyRanks(hand) {
 }
 
 function isFlush(hand) {
-    var suit = hand[0].suit;
+    let suit = hand[0].suit;
     for (let i = 0; i < 5; i++) {
         if (hand[i].suit !== suit) return false;
     }
@@ -23,10 +23,10 @@ function isFlush(hand) {
 function isStraight(hand) {
     if (isRoyalStraight(hand)) return true;
     hand = ValidatorHand.sortAscending(hand);
-    var start = hand[0].rank;
+    let start = hand[0].rank;
     for (let i = 0; i < 4; i++) {
-        var thisCard = hand[i].rank;
-        var nextCard = hand[i + 1].rank;
+        let thisCard = hand[i].rank;
+        let nextCard = hand[i + 1].rank;
         if (nextCard === thisCard + 1) continue;
         return false;
     }
@@ -34,7 +34,7 @@ function isStraight(hand) {
 }
 
 function isRoyalStraight(hand) {
-    var ranks = getRanksOnly(hand);
+    let ranks = getRanksOnly(hand);
     if (!ranks.includes(10)) return false;
     if (!ranks.includes(11)) return false;
     if (!ranks.includes(12)) return false;
@@ -54,7 +54,7 @@ function isStraightFlush(hand) {
 }
 
 function isFourOfaKind(hand) {
-    var tally = tallyRanks(hand);
+    let tally = tallyRanks(hand);
 
     for (let prop in tally) {
         if (tally[prop] === 4) return true;
@@ -64,7 +64,7 @@ function isFourOfaKind(hand) {
 }
 
 function isFullHouse(hand) {
-    var tally = tallyRanks(hand);
+    let tally = tallyRanks(hand);
 
     for (let prop in tally) {
         if (tally[prop] !== 3 && tally[prop] !== 2) return false;
@@ -74,7 +74,7 @@ function isFullHouse(hand) {
 }
 
 function isThreeOfaKind(hand) {
-    var tally = tallyRanks(hand);
+    let tally = tallyRanks(hand);
 
     for (let prop in tally) {
         if (tally[prop] === 3) return true;
@@ -84,8 +84,8 @@ function isThreeOfaKind(hand) {
 }
 
 function isTwoPair(hand) {
-    var tally = tallyRanks(hand);
-    var count = 0;
+    let tally = tallyRanks(hand);
+    let count = 0;
 
     for (let prop in tally) {
         if (!tally.hasOwnProperty(prop)) continue;
@@ -99,8 +99,8 @@ function isTwoPair(hand) {
 }
 
 function isOnePair(hand) {
-    var tally = tallyRanks(hand);
-    var pair = 0;
+    let tally = tallyRanks(hand);
+    let pair = 0;
 
     for (let prop in tally) {
         if (tally[prop] > 1) pair = ++pair;
@@ -112,7 +112,7 @@ function isOnePair(hand) {
 
 const ValidatorHand = {
     sortAscending: (originalHand) => {
-        var hand = JSON.parse(JSON.stringify(originalHand));
+        let hand = JSON.parse(JSON.stringify(originalHand));
         return hand.sort((a, b) => {
             if (a.rank < b.rank) return -1;
             if (a.rank > b.rank) return 1;

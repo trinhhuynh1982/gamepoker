@@ -4,7 +4,6 @@
     @include border-radius(30px);
     background-color: #fff;
     padding: 15px;
-    width: 50%;
     margin: 0 auto;
     .bestHand {
         font-size: 30px;
@@ -17,6 +16,8 @@
     .hand-inner {
         @include flexbox;
         @include align-items(center);
+        @include justify-content(center);
+        @include flex-wrap(wrap);
     }
     .playerInfo {
         width: 100px;
@@ -35,6 +36,8 @@
     .cards {
         @include flexbox;
         @include align-items(center);
+        @include flex-wrap(wrap);
+        @include justify-content(center);
         padding: 2px;
         margin: 0 auto;
     }

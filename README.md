@@ -2,13 +2,12 @@
 This project was bootstrapped with [Create React App](https://create-react-app.dev).
 # `npx create-react-app my-app`
 
+Download the zip or clone the project. In the project directory, you can run:
 ## Install packages
 
 ### `npm install`
 
 ## Running the project
-
-Download the zip or clone the project. In the project directory, you can run:
 ### `npm start`
 
 ## Problem 2

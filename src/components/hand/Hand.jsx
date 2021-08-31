@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Card from '../card/Card';
 import "./Hand.scss";
+import avatarIcon from "../../assets/images/user.png";
 
 const Hand = (props) => {
     const { player, bestHand, drawCards } = props;
@@ -11,7 +12,7 @@ const Hand = (props) => {
             <p className="bestHand animated">{bestHand}</p>
             <div className="hand-inner">
                 <div className="playerInfo">
-                    <img src={player.avatar} />
+                    <img src={avatarIcon} />
                     <span className="name">{player.name}</span>
                 </div>
                 <div className="cards">

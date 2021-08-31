@@ -19,6 +19,5 @@ Using Javascript write an application that meetings the following requirements:
 · Using those five cards, it determines the strongest poker hand. The poker hands to check for, in order of weakest hand ### to strongest is:
 o High card, one pair, two pair, three of a kind, straight, flush, full house, four of a kind, straight flush, or royal ### flush
 
-## Reference some function validator hand:
-https://www.calstatela.edu/sites/default/files/users/u2536/MATH-4740/poker-hand-cheat-sheet.pdf
-https://github.com/blakewatson/5card/blob/master/js/classes/HandValuator.js
+## Reference some function validator hand in HandValuator.js file:
+https://github.com/blakewatson/5card/tree/master/js/classes
